@@ -7,7 +7,6 @@ import cn.haoyu.common.enums.GroupStatus;
 import cn.haoyu.common.server.ChatContentServer;
 import cn.haoyu.common.server.GroupServer;
 import cn.haoyu.common.server.MemberServer;
-import cn.haoyu.common.utils.HID;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;

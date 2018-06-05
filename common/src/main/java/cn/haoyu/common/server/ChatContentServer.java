@@ -3,7 +3,6 @@ package cn.haoyu.common.server;
 import cn.haoyu.common.entity.ChatContent;
 import cn.haoyu.common.enums.ChatMsgType;
 import cn.haoyu.common.repository.ChatContentReposiroty;
-import cn.haoyu.common.utils.HID;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

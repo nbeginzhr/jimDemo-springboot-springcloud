@@ -3,7 +3,6 @@ package cn.haoyu.common.server;
 import cn.haoyu.common.entity.Group;
 import cn.haoyu.common.enums.GroupStatus;
 import cn.haoyu.common.repository.GroupRepository;
-import cn.haoyu.common.utils.HID;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
