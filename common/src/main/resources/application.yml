@@ -1,0 +1,49 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8161/eureka/
+server:
+  port: 8194
+  context-path: /common
+spring:
+  application:
+    name: common
+  mustache:
+    enabled: true
+  http:
+    encoding:
+      enabled: true
+      charset: UTF-8
+      force: true
+  datasource:
+    dataSourceClassName: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/manager?serverTimezone=CTT&useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true
+    username: root
+    password: root
+    cachePrepStmts: true # s设置是否对预编译使用local cache
+    prepStmtCacheSize: 250 # 指定了local cache的大小，使用了LRU进行逐出
+    prepStmtCacheSqlLimit: 2048 # 长度限制，默认256。超过该长度后，不使用预编译
+    useServerPrepStmts: true # 如果不开启(useServerPrepStmts=false)，使用com.mysql.jdbc.PreparedStatement进行本地SQL拼装，最后送到db上就是已经替换了?后的最终SQL
+    pool: HikariPool
+    maxActive: 20
+    minIdle: 1
+    initialSize: 1 # 初始化大小
+    maxWait: 60000 # 获取连接等待的超时时间
+  jpa:
+   database-platform: org.hibernate.dialect.MySQLInnoDBDialect
+   openInView: false
+   dataBase: MYSQL
+   show_sql: false
+   generate-ddl: false
+   hibernate:
+      ddl-auto: none
+      naming-strategy: org.hibernate.cfg.EJB3NamingStrategy
+  data:
+    jpa.repositories.enabled: true
+    mongodb:
+      uri: mongodb://localhost
+      database: common
+
+logging:
+  level: info
+  file: common.log

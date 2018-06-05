@@ -1,0 +1,26 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8161/eureka/
+
+server:
+  port: 8192
+  context-path: /chatServer
+
+spring:
+  application:
+    name: chatServer
+  mustache:
+    enabled: true
+  http:
+    encoding:
+      enabled: true
+      charset: UTF-8
+      force: true
+#  data:
+#    mongodb:
+#      uri: mongodb://localhost
+#      database: common
+logging:
+  level: info
+  file: chatServer.log

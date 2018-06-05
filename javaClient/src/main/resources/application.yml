@@ -1,0 +1,17 @@
+server:
+  port: 8195
+  context-path: /jclient
+
+spring:
+  application:
+    name: jclient
+  mustache:
+    enabled: true
+  http:
+    encoding:
+      enabled: true
+      charset: UTF-8
+      force: true
+logging:
+  level: info
+  file: jclient.log

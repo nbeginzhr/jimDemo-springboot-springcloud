@@ -1,0 +1,17 @@
+server:
+  port: 8193
+  context-path: /chat
+
+spring:
+  application:
+    name: chat
+  mustache:
+    enabled: true
+  http:
+    encoding:
+      enabled: true
+      charset: UTF-8
+      force: true
+logging:
+  level: info
+  file: chat.log
