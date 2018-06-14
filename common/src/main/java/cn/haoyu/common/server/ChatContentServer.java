@@ -3,6 +3,7 @@ package cn.haoyu.common.server;
 import cn.haoyu.common.entity.ChatContent;
 import cn.haoyu.common.enums.ChatMsgType;
 import cn.haoyu.common.repository.ChatContentReposiroty;
+import cn.haoyu.common.utils.HID;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,7 +29,7 @@ public class ChatContentServer {
     public ChatContent saveTextContent(String groupHid, String message, String fromHid) {
         logger.info("保存聊天记录,线程：{}，fromHid:{},groupHid:{},content:{}",Thread.currentThread().getName(),fromHid,groupHid,message);
         ChatContent content = new ChatContent();
-        content.setHid(HID.generate());
+        content.setHid(HID.create());
         content.setGroupHid(groupHid);
         content.setFromMember(fromHid);
         content.setMessage(message);

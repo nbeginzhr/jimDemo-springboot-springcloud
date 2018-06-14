@@ -3,6 +3,7 @@ package cn.haoyu.common.server;
 import cn.haoyu.common.entity.Group;
 import cn.haoyu.common.enums.GroupStatus;
 import cn.haoyu.common.repository.GroupRepository;
+import cn.haoyu.common.utils.HID;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -26,7 +27,7 @@ public class GroupServer {
 
     public Group createGroup(String name, List<String> members) {
         Group group = new Group();
-        group.setHid(HID.generate());
+        group.setHid(HID.create());
         group.setName(name);
         group.setCreateTime(new Date());
         group.setUseFor("qunliao");
